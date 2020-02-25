@@ -4,7 +4,6 @@ import { Container } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import GithubButtons from '../GithubButtons/GithubButtons';
 import { githubButtons } from '../../mock/data';
-import Router from '../../../assets/typescript.svg';
 
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
@@ -29,12 +28,10 @@ const Footer = () => {
                   target="_blank"
                   aria-label={name}
                 >
-                  {/* <i className={`fa fa-${name || 'refresh'} fa-inverse`} /> */}
                   <FontAwesomeIcon icon={['fab', name]} inverse />
                 </a>
               );
             })}
-          <Router />
         </div>
         <hr />
         <p className="footer__text">

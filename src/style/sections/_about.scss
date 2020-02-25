@@ -41,6 +41,10 @@
       justify-content: center;
       flex-direction: column;
 
+      & p {
+        text-align: justify;
+      }
+
       @include respond(phone) {
         align-items: center;
       }
