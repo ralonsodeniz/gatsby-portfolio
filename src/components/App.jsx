@@ -32,7 +32,7 @@ function App() {
   const [dataLoading, setDataLoading] = useState(true);
 
   const isObjectEmpty = object => {
-    return Object.entries(object).length === 0 && object.constructor === Object ? true : false;
+    return Object.entries(object).length === 0 && object.constructor === Object;
   };
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function App() {
     ) {
       setDataLoading(false);
     }
-  }, []);
+  }, [hero, about, skills, projects, contact, footer]);
 
   return (
     <PortfolioProvider value={{ hero, about, skills, projects, contact, footer }}>
