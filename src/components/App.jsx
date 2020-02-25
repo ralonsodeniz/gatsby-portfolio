@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -41,11 +41,15 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, skills, projects, contact, footer }}>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+      {hero.hasOwnProperty('title') ? (
+        <>
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+          <Footer />
+        </>
+      ) : null}
     </PortfolioProvider>
   );
 }
