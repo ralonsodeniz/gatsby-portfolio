@@ -21,10 +21,10 @@ export const aboutData = {
   paragraphOne:
     'My name is Raúl Alonso Déniz and I am a full stack developer focused on the frontend React ecosystem and Firebase + Node.js for the backend, but always willing and eager to learn new stacks to improve and grow as developer.',
   paragraphTwo:
-    'I am a former Industrial Automation Engineer. After years of PLC programming and SCADA systems integrations I have found my true passion, trying to make poeple everyday easier and more enjoyable through apps and websites.',
+    'I am a former Industrial Automation Engineer. After years of PLC programming and SCADA systems integrations I have found my true passion, trying to create useful and enjoyable applications to make poeple everyday easier.',
   paragraphThree:
     'I am an open minded, proactive and teamwork oriented person who loves to work in international enviorments',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: '', // if no resume, the button will not show up
 };
 
 // SKILLS DATA
@@ -249,9 +249,4 @@ export const footerData = {
       url: 'https://github.com/ralonsodeniz',
     },
   ],
-};
-
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };

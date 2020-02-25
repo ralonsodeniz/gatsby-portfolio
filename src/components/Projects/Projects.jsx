@@ -41,20 +41,17 @@ const Projects = () => {
                     distance="30px"
                   >
                     <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                      <h3 className="project-wrapper__text-title">{title}</h3>
                       <div style={{ textAlign: 'justify' }}>
-                        <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
-                        <p className="mb-4">{info2 || ''}</p>
-                        <p className="mb-4">{info3 || ''}</p>
+                        <p>{info}</p>
+                        <p className="mb-4">{info2}</p>
+                        <p className="mb-4">{info3}</p>
                         <a
                           className="link-to-original"
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{ textDecoration: 'none' }}
-                          href={sourceUrl || '#!'}
+                          href={sourceUrl}
                         >
                           <p>{info4}</p>
                         </a>
@@ -63,7 +60,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
+                        href={url}
                       >
                         See Live
                       </a>
@@ -91,7 +88,7 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__image">
                       <a
-                        href={url || '#!'}
+                        href={url}
                         target="_blank"
                         aria-label="Project Link"
                         rel="noopener noreferrer"
