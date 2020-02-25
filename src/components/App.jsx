@@ -29,6 +29,11 @@ function App() {
   const [projects, setProjects] = useState([]);
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
+  const [dataLoading, setDataLoading] = useState(true);
+
+  const isObjectEmpty = object => {
+    return Object.entries(object).length === 0 && object.constructor === Object ? true : false;
+  };
 
   useEffect(() => {
     setHero({ ...heroData });
@@ -39,9 +44,22 @@ function App() {
     setFooter({ ...footerData });
   }, []);
 
+  useEffect(() => {
+    if (
+      !isObjectEmpty(hero) &&
+      !isObjectEmpty(about) &&
+      !isObjectEmpty(skills) &&
+      !isObjectEmpty(projects) &&
+      !isObjectEmpty(contact) &&
+      !isObjectEmpty(footer)
+    ) {
+      setDataLoading(false);
+    }
+  }, []);
+
   return (
     <PortfolioProvider value={{ hero, about, skills, projects, contact, footer }}>
-      {!hero ? null : (
+      {dataLoading ? null : (
         <>
           <Hero />
           <About />
