@@ -17,10 +17,10 @@
     }
 
     .row {
-      margin-bottom: 8rem;
+      margin-bottom: 3rem;
 
       @include respond(phone) {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -40,7 +40,7 @@
         font-size: $mid-font-size;
 
         @include respond(phone) {
-          font-size: 2rem;
+          font-size: $mid-font-size;
         }
       }
 
