@@ -8,11 +8,11 @@ import PortfolioContext from '../../context/context';
 
 import Title from '../Title/Title';
 
-import Firebase from '../../../assets/Firebase.svg';
-import Gatsby from '../../../assets/Gatsby.svg';
-import Redux from '../../../assets/Redux.svg';
-import Router from '../../../assets/Router.svg';
-import Typescript from '../../../assets/Typescript.svg';
+import Firebase from '../../../assets/firebase.svg';
+import Gatsby from '../../../assets/gatsby.svg';
+import Redux from '../../../assets/redux.svg';
+import Router from '../../../assets/router.svg';
+import Typescript from '../../../assets/typescript.svg';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
