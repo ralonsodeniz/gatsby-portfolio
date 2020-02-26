@@ -31,7 +31,7 @@ const Projects = () => {
             const { id, title, info, info2, info3, info4, sourceUrl, url, repo, img } = project;
 
             return (
-              <Row key={id} style={{ display: 'flex', alignItems: 'center' }}>
+              <Row key={id}>
                 <Col lg={5} sm={12}>
                   <Fade
                     left={isDesktop}
