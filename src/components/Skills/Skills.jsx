@@ -1,10 +1,18 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, Fragment } from 'react';
 import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import uuidv1 from 'uuid/v1';
+
 import PortfolioContext from '../../context/context';
+
 import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
+
+import Firebase from '../../../assets/Firebase.svg';
+import Gatsby from '../../../assets/Gatsby.svg';
+import Redux from '../../../assets/Redux.svg';
+import Router from '../../../assets/Router.svg';
+import Typescript from '../../../assets/Typescript.svg';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
@@ -22,89 +30,92 @@ const Skills = () => {
     }
   }, []);
 
+  const svgObj = {
+    firebase: Firebase,
+    gatsby: Gatsby,
+    redux: Redux,
+    router: Router,
+    typescript: Typescript,
+  };
+
   return (
-    <section id="projects">
+    <section id="skills">
       <Container>
-        <div className="project-wrapper">
-          <Title title="Projects" />
-          {skills.map(project => {
-            const { id, title, info, info2, url, repo, img } = project;
+        <div className="skill-wrapper">
+          <Title title="Skills" />
+          {Object.entries(skills).map(category => {
+            const [categoryTitle, categoryData] = category;
 
             return (
-              <Row key={id}>
-                <Col lg={4} sm={12}>
-                  <Fade
-                    left={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={500}
-                    distance="30px"
-                  >
-                    <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title}</h3>
-                      <div>
-                        <p>{info}</p>
-                        <p className="mb-4">{info2}</p>
+              <Fragment key={categoryTitle}>
+                <Row>
+                  <Col sm={12}>
+                    <Fade
+                      left={isDesktop}
+                      bottom={isMobile}
+                      duration={1000}
+                      delay={500}
+                      distance="30px"
+                    >
+                      <div className="skill-wrapper__text">
+                        <h3 className="skill-wrapper__text-title">{categoryTitle}</h3>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url}
-                      >
-                        See Live
-                      </a>
+                    </Fade>
+                  </Col>
+                </Row>
+                {categoryData.map(skill => {
+                  const { id, icon, icon2, iconType, name, description } = skill;
 
-                      {repo && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={repo}
+                  const faMarkup = icon2 ? (
+                    <>
+                      <FontAwesomeIcon size="7x" icon={[iconType, icon]} />
+                      <FontAwesomeIcon
+                        style={{ marginLeft: '20px' }}
+                        size="7x"
+                        icon={[iconType, icon2]}
+                      />
+                    </>
+                  ) : (
+                    <FontAwesomeIcon size="7x" icon={[iconType, icon]} />
+                  );
+
+                  const SvgIcon = iconType === 'svg' ? svgObj[icon] : null;
+
+                  return (
+                    <Row key={id}>
+                      <Col lg={4} sm={12}>
+                        <Fade
+                          right={isDesktop}
+                          bottom={isMobile}
+                          duration={1000}
+                          delay={1000}
+                          distance="30px"
                         >
-                          Source Code
-                        </a>
-                      )}
-                    </div>
-                  </Fade>
-                </Col>
-                <Col lg={8} sm={12}>
-                  <Fade
-                    right={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
-                    distance="30px"
-                  >
-                    <div className="project-wrapper__image">
-                      <a
-                        href={url}
-                        target="_blank"
-                        aria-label="Project Link"
-                        rel="noopener noreferrer"
-                      >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
+                          <div className="skill-wrapper__image">
+                            {iconType === 'svg' ? <SvgIcon /> : faMarkup}
                           </div>
-                        </Tilt>
-                      </a>
-                    </div>
-                  </Fade>
-                </Col>
-              </Row>
+                        </Fade>
+                      </Col>
+                      <Col lg={8} sm={12}>
+                        <Fade
+                          left={isDesktop}
+                          bottom={isMobile}
+                          duration={1000}
+                          delay={500}
+                          distance="30px"
+                        >
+                          <div className="skill-wrapper__text">
+                            <h4 className="skill-wrapper__text-description">{name}</h4>
+                            <div>
+                              <p style={{ textAlign: 'justify' }}>{description}</p>
+                            </div>
+                          </div>
+                        </Fade>
+                      </Col>
+                    </Row>
+                  );
+                })}
+              </Fragment>
             );
           })}
         </div>

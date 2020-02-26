@@ -24,7 +24,7 @@ export const aboutData = {
     'I am a former Industrial Automation Engineer. After years of PLC programming and SCADA systems integrations I have found my true passion, trying to create useful and enjoyable applications to make poeple everyday easier.',
   paragraphThree:
     'I am an open minded, proactive and teamwork oriented person who loves to work in international enviorments',
-  resume: '', // if no resume, the button will not show up
+  resume: 'placeholder', // if no resume, the button will not show up
 };
 
 // SKILLS DATA
@@ -33,119 +33,120 @@ export const skillsData = {
     {
       id: uuidv1(),
       icon: 'html5',
+      iconType: 'fab',
       name: 'HTML5',
-      description: 'Using new semantic, graphical, multimedia elements and APIs',
-      svg: false,
+      description: 'Using new semantic, graphical and multimedia elements and APIs.',
     },
     {
       id: uuidv1(),
       icon: 'css3',
+      iconType: 'fab',
       name: 'CSS3',
-      description: 'Styling with CSS using SASS and SCSS syntaxes',
+      description: 'Styling with CSS using SASS and SCSS syntaxes.',
     },
     {
       id: uuidv1(),
       icon: 'js',
+      iconType: 'fab',
       name: 'JavaScript',
-      description: 'Modern JS including ES5 to 10',
-      svg: false,
+      description: 'Modern JS including ES5 to 10.',
     },
   ],
   'Back end': [
     {
       id: uuidv1(),
       icon: 'node',
+      iconType: 'fab',
       name: 'Node.js',
-      description: 'RESTful api using expressjs, middlewares and jwt',
-      svg: false,
+      description: 'RESTful api using expressjs, middlewares and JWT.',
     },
     {
       id: uuidv1(),
       icon: 'firebase',
+      iconType: 'svg',
       name: 'Firebase',
       description:
-        'Backend integration using firebase auth, firestore NoSQL database, firebase storage, cloud functions, cloud tasks and others google cloud api',
-      svg: true,
+        'Backend integration using firebase auth, firestore NoSQL database, firebase storage, cloud functions, cloud tasks and others google cloud APIs.',
     },
     {
       id: uuidv1(),
       icon: 'database',
+      iconType: 'fas',
       name: 'SQL and NoSQL databases',
-      description: 'Basic acknowledge of PostgreSQL and Redis ',
-      svg: false,
+      description: 'Basic acknowledge of PostgreSQL and Redis. ',
     },
   ],
   'JS Frameworks and Libraries': [
     {
       id: uuidv1(),
       icon: 'react',
-      name: 'React',
+      iconType: 'fab',
+      name: 'React.js',
       description:
         "Design of user interfaces using React's latest features like Hooks, ContextAPI, lazy... and its rich ecosystem.",
-      svg: false,
     },
     {
       id: uuidv1(),
       icon: 'redux',
+      iconType: 'svg',
       name: 'Redux',
       description:
-        'Powerful state container and management using the new version of react-redux hooks, Redux-Sagas or Thunk to manage side effects such as async data fetching from API, redux-persist to save store data in the browser local storage, reselect for memoized selectors...',
-      svg: true,
+        'Powerful state container and management using the new version of react-redux hooks, redux-saga or redux-thunk to manage side effects, redux-persist to store data in the local storage, reselect for memoized selectors...',
     },
     {
       id: uuidv1(),
       icon: 'router',
-      name: 'Router',
+      iconType: 'svg',
+      name: 'React Router',
       description:
-        'Handle React single page applications routes using React Router components and hooks',
-      svg: true,
+        'Handle React single page applications routes using react-router-dom components and hooks',
     },
     {
       id: uuidv1(),
       icon: 'typescript',
+      iconType: 'svg',
       name: 'Typescript',
       description: 'Basic acknowledge of the strict syntactical superset of JavaScript',
-      svg: true,
     },
     {
       id: uuidv1(),
       icon: 'gatsby',
+      iconType: 'svg',
       name: 'Gatsby',
       description:
         'Basic acknowledge of the static single pages aplication framework using GraphQL and React',
-      svg: true,
     },
     {
       id: uuidv1(),
       icon: 'book',
+      iconType: 'fas',
       name: 'Other libraries',
       description:
-        'react-redux-firebase, redux-firestore, styled-components, axios, materialui, bootstrap, react-bootstrap, react-reveal, stripe, ...',
-      svg: false,
+        'react-redux-firebase, redux-firestore, styled-components, axios, materialui, bootstrap, react-bootstrap, react-reveal, stripe...',
     },
   ],
   'Version control, Package managing and Hosting': [
     {
       id: uuidv1(),
       icon: 'github',
+      iconType: 'fab',
       name: 'Version control',
       description: 'GitHub',
-      svg: false,
     },
     {
       id: uuidv1(),
       icon: 'yarn',
       icon2: 'npm',
+      iconType: 'fab',
       name: 'Package managing',
       description: 'yarn and npm',
-      svg: false,
     },
     {
       id: uuidv1(),
       icon: 'server',
+      iconType: 'fas',
       name: 'Hosting',
       description: 'Firebase hosting, Heroku, Netlify ',
-      svg: false,
     },
   ],
 };
@@ -174,10 +175,10 @@ export const projectsData = [
     info2:
       'Frontend: react.js, react-redux, redux-saga, react-router-dom, redux-persist, reselect, styled-components.',
     info3: 'Backend: firebase-auth, firestore, firebase-storage, node.js.',
-    info4:
-      'Extended version of the final project from the Complete React Developer in 2020 Udemy course.',
-    sourceUrl: 'https://www.udemy.com/course/complete-react-developer-zero-to-mastery/',
-    url: 'https://crw-clothing-rad.herokuapp.com/',
+    // info4:
+    //   'Extended version of the final project from the Complete React Developer in 2020 Udemy course.',
+    // sourceUrl: 'https://www.udemy.com/course/complete-react-developer-zero-to-mastery/',
+    // url: 'https://crw-clothing-rad.herokuapp.com/',
     repo:
       'https://github.com/ralonsodeniz/react-ecom-project-redux-persist-styledComponents-saga-hooks-backend-cartitemsdb', // if no repo, the button will not show up
   },
@@ -192,9 +193,9 @@ export const projectsData = [
       'Frontend: react.js, react-redux, redux-saga, react-router-dom, reselect, styled-components, dayjs, material-ui, axios, jwt-decode.',
     info3:
       'Backend: firebase-auth, firestore, firebase-storage, google cloud functions, node.js, express.js.',
-    info4:
-      'Rework based on the tutorial Full Stack React & Firebase Tutorial - Build a social media app from freeCodeCamp and Classed to update it to the last React version using functional components and hooks',
-    sourceUrl: 'https://www.youtube.com/watch?v=m_u6P5k0vP0',
+    // info4:
+    //   'Rework based on the tutorial Full Stack React & Firebase Tutorial - Build a social media app from freeCodeCamp and Classed to update it to the last React version using functional components and hooks',
+    // sourceUrl: 'https://www.youtube.com/watch?v=m_u6P5k0vP0',
     url: 'https://fbintegration-7e5f6.firebaseapp.com/',
     repo: 'https://github.com/ralonsodeniz/react-firebase-socialmediaapp', // if no repo, the button will not show up
   },
@@ -206,9 +207,9 @@ export const projectsData = [
       'Evernote like app that stores in real time your notes in the database. It allows the user to create, delete and modify both the body of the note and the title',
     info2: 'Frontend: react.js, reselect, react-quill, material-ui.',
     info3: 'Backend: firestore.',
-    info4:
-      'Rework based on the tutorial Intermediate React and Firebase Tutorial - Build an Evernote Clone from freeCodeCamp to update it to the last React version using functional, hooks and contextAPI to mimic redux functionality',
-    sourceUrl: 'https://www.youtube.com/watch?v=I250xdtUvy8&t=1s',
+    // info4:
+    //   'Rework based on the tutorial Intermediate React and Firebase Tutorial - Build an Evernote Clone from freeCodeCamp to update it to the last React version using functional components, hooks and contextAPI to mimic redux functionality',
+    // sourceUrl: 'https://www.youtube.com/watch?v=I250xdtUvy8&t=1s',
     url: 'https://nevernotetodoapp.firebaseapp.com/',
     repo: 'https://github.com/ralonsodeniz/react-firebase-noteapp', // if no repo, the button will not show up
   },
@@ -220,9 +221,9 @@ export const projectsData = [
       'Face recognition app using clarifai API. Users can register and upload images to recognize faces and store a count of how many recognitions they have relized',
     info2: 'Frontend: react.js, tachyons, react-tilt, react-particles.',
     info3: 'Backend: node.js, bcrypt, postgreSQL, express.js, knex.',
-    info4:
-      'Final project of the course The Complete Web Developer in 2020: Zero to Mastery Udemy course',
-    sourceUrl: 'https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/',
+    // info4:
+    //   'Final project of the course The Complete Web Developer in 2020: Zero to Mastery Udemy course',
+    // sourceUrl: 'https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/',
     url: 'https://facerecognitionrad.herokuapp.com/',
     repo: 'https://github.com/ralonsodeniz/faceRecognition', // if no repo, the button will not show up
   },

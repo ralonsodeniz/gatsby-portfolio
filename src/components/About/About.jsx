@@ -6,7 +6,7 @@ import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
-  const { about } = useContext(PortfolioContext);
+  const { about, setBodySelection } = useContext(PortfolioContext);
   const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
@@ -21,6 +21,9 @@ const About = () => {
       setIsDesktop(false);
     }
   }, []);
+
+  const handleSubitSkills = () => setBodySelection('skills');
+  const handleSubitProjects = () => setBodySelection('projects');
 
   return (
     <section id="about">
@@ -41,18 +44,30 @@ const About = () => {
                 <p className="about-wrapper__info-text">{paragraphTwo}</p>
                 <p className="about-wrapper__info-text">{paragraphThree}</p>
 
-                {resume && (
-                  <span className="d-flex mt-3">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="cta-btn cta-btn--resume"
-                      href={resume}
-                    >
-                      Resume
-                    </a>
-                  </span>
-                )}
+                <span className="d-flex mt-3">
+                  <a
+                    // target="_blank"
+                    // rel="noopener noreferrer"
+                    className="cta-btn cta-btn--resume"
+                    href={`#${resume}`}
+                  >
+                    Resume
+                  </a>
+                  <a
+                    className="cta-btn cta-btn--resume ml-5"
+                    href="#skills"
+                    onClick={handleSubitSkills}
+                  >
+                    Skills
+                  </a>
+                  <a
+                    className="cta-btn cta-btn--resume ml-5"
+                    href="#projects"
+                    onClick={handleSubitProjects}
+                  >
+                    Projects
+                  </a>
+                </span>
               </div>
             </Fade>
           </Col>

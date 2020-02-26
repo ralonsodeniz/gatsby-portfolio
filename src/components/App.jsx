@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
+import { faServer, faDatabase, faBook, faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHtml5,
+  faCss3,
+  faJs,
+  faNode,
+  faReact,
+  faGithub,
+  faLinkedin,
+  faYarn,
+  faNpm,
+} from '@fortawesome/free-brands-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import Hero from './Hero/Hero';
 import About from './About/About';
-import Projects from './Projects/Projects';
+import Body from './Body/Body';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 
@@ -20,7 +29,21 @@ import {
   footerData,
 } from '../mock/data';
 
-library.add(fas, fab, far);
+library.add(
+  faHtml5,
+  faCss3,
+  faJs,
+  faNode,
+  faReact,
+  faGithub,
+  faLinkedin,
+  faYarn,
+  faNpm,
+  faServer,
+  faDatabase,
+  faBook,
+  faAngleUp
+);
 
 function App() {
   const [hero, setHero] = useState({});
@@ -30,6 +53,7 @@ function App() {
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const [dataLoading, setDataLoading] = useState(true);
+  const [bodySelection, setBodySelection] = useState('skills');
 
   const isObjectEmpty = object => {
     return Object.entries(object).length === 0 && object.constructor === Object;
@@ -58,12 +82,14 @@ function App() {
   }, [hero, about, skills, projects, contact, footer]);
 
   return (
-    <PortfolioProvider value={{ hero, about, skills, projects, contact, footer }}>
+    <PortfolioProvider
+      value={{ hero, about, skills, projects, contact, footer, bodySelection, setBodySelection }}
+    >
       {dataLoading ? null : (
         <>
           <Hero />
           <About />
-          <Projects />
+          <Body />
           <Contact />
           <Footer />
         </>
