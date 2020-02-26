@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="footer navbar-static-bottom">
       <Container>
-        <a href="#top" aria-label="Back To Top" className="back-to-top">
+        <a href="#about" aria-label="Back To Top" className="back-to-top">
           <FontAwesomeIcon icon={['fas', 'angle-up']} size="2x" color="white" />
         </a>
         <div className="social-links">
