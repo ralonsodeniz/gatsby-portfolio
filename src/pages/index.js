@@ -12,9 +12,15 @@ export default () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{title || 'Gatsby Simplefolio'}</title>
-        <html lang={lang || 'en'} />
-        <meta name="description" content={description || 'Gatsby Simplefolio'} />
+        <title>{title}</title>
+        <html lang={lang} />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="portfolio" />
+        <meta property="og:site_name" content="RAD Portfolio" />
+        <meta property="og:image" content="https://i.imgur.com/JwcFNsg.png" />
+        <meta property="og:title" content="RAD Portfolio" />
+        <meta property="og:description" content="Raul Alonso Déniz personal portfolio" />
+        <meta property="og:url" content="https://radportfolio.netlify.com" />
       </Helmet>
       <App />
     </>

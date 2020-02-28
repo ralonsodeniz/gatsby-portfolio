@@ -19,16 +19,6 @@ export default function HTML({
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta property="og:type" content="profile" />
-        <meta property="profile:username" content="ralonsodeniz" />
-        <meta property="og:site_name" content="GitHub" />
-        <meta
-          property="og:image"
-          content="https://avatars2.githubusercontent.com/u/28633982?s=400&amp;v=4"
-        />
-        <meta property="og:title" content="RAD Portfolio" />
-        <meta property="og:description" content="Raul Alonso Déniz personal portfolio" />
-        <meta property="og:url" content="https://radportfolio.netlify.com" />
         {headComponents}
       </head>
       <body {...bodyAttributes}>
