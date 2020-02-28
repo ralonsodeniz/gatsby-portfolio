@@ -20,9 +20,9 @@ export default function HTML({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta property="og:title" content="RAD Portfolio" />
-        <meta property="og:image" content="//https://i.imgur.com/JwcFNsg.png" />
+        <meta property="og:image" content="https://i.imgur.com/JwcFNsg.png" />
         <meta property="og:description" content="Raul Alonso Déniz personal portfolio" />
-        <meta property="og:url" content="//https://radportfolio.netlify.com" />
+        <meta property="og:url" content="https://radportfolio.netlify.com" />
         {headComponents}
       </head>
       <body {...bodyAttributes}>
