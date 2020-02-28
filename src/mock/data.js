@@ -4,7 +4,7 @@ import uuidv1 from 'uuid/v1';
 export const headData = {
   title: 'Portfolio', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
-  description: 'RAD portfolio', // e.g: Welcome to my website
+  description: 'Raul Alonso Deniz portfolio', // e.g: Welcome to my website
 };
 
 // HERO DATA
