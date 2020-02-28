@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
 export default () => {
-  const { title, lang, description } = headData;
+  const { title, lang, description, siteUrl, locale, localeAlt, imageUrl } = headData;
 
   return (
     <>
@@ -15,15 +15,19 @@ export default () => {
         <title>{title}</title>
         <html lang={lang} />
         <meta name="description" content={description} />
-        <meta property="og:type" content="portfolio" />
-        <meta property="og:site_name" content="RAD Portfolio" />
-        <meta
-          property="og:image"
-          content="https://avatars2.githubusercontent.com/u/28633982?s=400&amp;v=4"
-        />
-        <meta property="og:title" content="RAD Portfolio" />
-        <meta property="og:description" content="Raul Alonso Déniz personal portfolio" />
-        <meta property="og:url" content="https://radportfolio.netlify.com" />
+        <meta name="image" content={imageUrl} />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={locale} />
+        <meta property="og:locale:alternate" content={localeAlt} />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:description" content={description} />
       </Helmet>
       <App />
     </>

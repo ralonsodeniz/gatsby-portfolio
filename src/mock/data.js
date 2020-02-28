@@ -5,6 +5,10 @@ export const headData = {
   title: 'Portfolio', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'Raul Alonso Deniz portfolio', // e.g: Welcome to my website
+  siteUrl: 'https://radportfolio.netlify.com/',
+  locale: 'en_GB',
+  localeAlt: 'es_ES',
+  imageUrl: 'https://avatars2.githubusercontent.com/u/28633982?s=400&v=4',
 };
 
 // HERO DATA
