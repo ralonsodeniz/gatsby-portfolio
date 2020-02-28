@@ -8,7 +8,7 @@ export const headData = {
   siteUrl: 'https://radportfolio.netlify.com/',
   locale: 'en_GB',
   localeAlt: 'es_ES',
-  imageUrl: 'https://avatars2.githubusercontent.com/u/28633982?s=400&v=4',
+  imageUrl: 'https://i.imgur.com/JwcFNsg.png',
 };
 
 // HERO DATA
