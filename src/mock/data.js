@@ -182,7 +182,7 @@ export const projectsData = [
     // info4:
     //   'Extended version of the final project from the Complete React Developer in 2020 Udemy course.',
     // sourceUrl: 'https://www.udemy.com/course/complete-react-developer-zero-to-mastery/',
-    // url: 'https://crw-clothing-rad.herokuapp.com/',
+    url: 'https://crw-clothing-rad.herokuapp.com/',
     repo:
       'https://github.com/ralonsodeniz/react-ecom-project-redux-persist-styledComponents-saga-hooks-backend-cartitemsdb', // if no repo, the button will not show up
   },
