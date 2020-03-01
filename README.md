@@ -1,7 +1,7 @@
 # Raúl Alonso Déniz portfolio
 
 ## Info
-This is my personal portfolio. It is a rework based on Jacobo Martinez [gatsby-simplefolio](https://github.com/cobidev/gatsby-simplefolio) with some extended features such as a skills component and support for open graph protocol.
+This is my personal portfolio. It is a rework based on Jacobo Martinez [gatsby-simplefolio](https://github.com/cobidev/gatsby-simplefolio) template with some extended features such as a skills component and support for open graph protocol.
 
 ## Technologies used
 
