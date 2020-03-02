@@ -192,7 +192,7 @@ export const projectsData = [
     img: 'socialape.png',
     title: 'Social Ape',
     info:
-      'Twitter like social app where users can register, post screams, comment and like them. On build notification for new comments and likes and editing user details',
+      'Twitter like social app where users can register, post screams, comment and like them. On build notification for new comments and likes and editing user details.',
     info2:
       'Frontend: react.js, react-redux, redux-saga, react-router-dom, reselect, styled-components, dayjs, material-ui, axios, jwt-decode.',
     info3:
@@ -208,7 +208,7 @@ export const projectsData = [
     img: 'nevernote.png',
     title: 'NeverNote',
     info:
-      'Evernote like app that stores in real time your notes in the database. It allows the user to create, delete and modify both the body of the note and the title',
+      'Evernote like app that stores in real time your notes in the database. It allows the user to create, delete and modify both the body of the note and the title.',
     info2: 'Frontend: react.js, reselect, react-quill, material-ui.',
     info3: 'Backend: firestore.',
     // info4:
@@ -222,7 +222,7 @@ export const projectsData = [
     img: 'faceRecognition.png',
     title: 'Smart Brain',
     info:
-      'Face recognition app using clarifai API. Users can register and upload images to recognize faces and store a count of how many recognitions they have relized',
+      'Face recognition app using clarifai API. Users can register and upload images to recognize faces and store a count of how many recognitions they have relized.',
     info2: 'Frontend: react.js, tachyons, react-tilt, react-particles.',
     info3: 'Backend: node.js, bcrypt, postgreSQL, express.js, knex.',
     // info4:
