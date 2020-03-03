@@ -27,7 +27,7 @@ export const aboutData = {
   paragraphTwo:
     'I am a former Industrial Automation Engineer. After years of PLC programming and SCADA systems integrations I have found my true passion, trying to create useful and enjoyable applications to make poeple everyday easier.',
   paragraphThree:
-    'I am an open minded, proactive and teamwork oriented person who loves to work in international enviorments',
+    'I am an open minded, proactive and teamwork oriented person who loves to work in international environments',
   resume: 'https://drive.google.com/drive/folders/1z6gvpx8aVclF2w68LludB2st2Y2HOHA9?usp=sharing', // if no resume, the button will not show up
 };
 
