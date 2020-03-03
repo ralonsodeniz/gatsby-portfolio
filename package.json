@@ -1,11 +1,10 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "rad-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "rad personal portfolio",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "svgr": "svgr -d src/Icons/ assets/",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -43,7 +42,6 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
-    "@svgr/cli": "^5.2.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",

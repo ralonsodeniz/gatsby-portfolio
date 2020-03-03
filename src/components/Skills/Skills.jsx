@@ -13,6 +13,7 @@ import Gatsby from '../../../assets/gatsby.svg';
 import Redux from '../../../assets/redux.svg';
 import Router from '../../../assets/router.svg';
 import Typescript from '../../../assets/typescript.svg';
+import Bundler from '../../../assets/bundler.svg';
 
 const Skills = () => {
   const { skills } = useContext(PortfolioContext);
@@ -36,6 +37,7 @@ const Skills = () => {
     redux: Redux,
     router: Router,
     typescript: Typescript,
+    bundler: Bundler,
   };
 
   return (

@@ -80,7 +80,7 @@ export const skillsData = {
       description: 'Basic acknowledge of PostgreSQL and Redis. ',
     },
   ],
-  'JS Frameworks and Libraries': [
+  'JS Frameworks, Libraries and Ecosystem': [
     {
       id: uuidv1(),
       icon: 'react',
@@ -119,6 +119,13 @@ export const skillsData = {
       name: 'Gatsby',
       description:
         'Basic acknowledge of the static single pages aplication framework using GraphQL and React',
+    },
+    {
+      id: uuidv1(),
+      icon: 'bundler',
+      iconType: 'svg',
+      name: 'Bundlers, linters and compilers',
+      description: 'Create react app, webpack, babel, prettier, eslint and husky',
     },
     {
       id: uuidv1(),
